@@ -27,7 +27,7 @@ ASUS_WMI_DEVID_RSOC   0x00120057
 
 ## Fans and Thermal
   
-#### Current Cpu And Gpu Fan Speed
+### Current Cpu And Gpu Fan Speed
 
 CPU
 ((Get-WmiObject -Namespace root/WMI -Class AsusAtkWmi_WMNB).DSTS(0x00110013).device_Status - 0x10000) * 0x64
@@ -55,9 +55,9 @@ Values: 0 - Normal, 1 - Overboost, 2 - Silent.
 
 ### Fan Control
 
-ASUS_WMI_DEVID_FAN_CTRL   0x00110012 **(Deprecated)**
+~~ASUS_WMI_DEVID_FAN_CTRL   0x00110012 **(Deprecated)**~~
 
-Values: 1 - Low Speed, 2 - Medium Speed, 3 - High Speed. 
+~~Values: 1 - Low Speed, 2 - Medium Speed, 3 - High Speed.~~
 
 ### Cpu Fan Control
 
@@ -87,3 +87,15 @@ Values: 0 - Disable, 1 - Enable.
 
 
 (Get-WmiObject -Namespace root/WMI -Class AsusAtkWmi_WMNB).DEVS(0x00050019, Value)
+
+
+## Gpu settings
+
+
+### Mux Switch
+
+ASUS_WMI_DEVID_GPU_MUX   0x00090016
+
+Values: 0 - dGpu, 1 - iGpu.
+
+(Get-WmiObject -Namespace root/WMI -Class AsusAtkWmi_WMNB).DEVS(0x00090016, Value)
