@@ -79,7 +79,7 @@ Values: 0 - Auto, 1 - Fullspeed.
 (Get-WmiObject -Namespace root/WMI -Class AsusAtkWmi_WMNB).DEVS(0x00110014, Value)
 
 
-### Panel Overdrive
+## Panel Overdrive
 
 ASUS_WMI_DEVID_PANEL_OD   0x00050019       
    
@@ -99,3 +99,22 @@ ASUS_WMI_DEVID_GPU_MUX   0x00090016
 Values: 0 - dGpu, 1 - iGpu.
 
 (Get-WmiObject -Namespace root/WMI -Class AsusAtkWmi_WMNB).DEVS(0x00090016, Value)
+
+
+### Enable/Disable dGpu
+
+ASUS_WMI_DEVID_DGPU   0x00090020
+
+(Get-WmiObject -Namespace root/WMI -Class AsusAtkWmi_WMNB).DEVS(0x00090020, Value)
+
+Values: 0,1. /shrug
+
+
+### Enable/Disable eGpu
+
+ASUS_WMI_DEVID_EGPU   0x00090019
+
+(Get-WmiObject -Namespace root/WMI -Class AsusAtkWmi_WMNB).DEVS(0x00090019, Value)
+
+Values: 0 - Enable, 1 - Disable.
+
