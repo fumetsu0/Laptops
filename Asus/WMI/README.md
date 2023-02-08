@@ -79,7 +79,7 @@ Values: 0 - Auto, 1 - Fullspeed.
 (Get-WmiObject -Namespace root/WMI -Class AsusAtkWmi_WMNB).DEVS(0x00110014, Value)
 
 
-## Panel Overdrive
+### Panel Overdrive
 
 ASUS_WMI_DEVID_PANEL_OD   0x00050019       
    
