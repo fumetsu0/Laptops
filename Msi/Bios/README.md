@@ -5,4 +5,5 @@
 
 ## Works For:
 MSI GF63 8RC
+
 MSI GL63 9SC
