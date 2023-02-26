@@ -13,7 +13,6 @@
 # ASUS WMI
 
 
-
 ## Battery
 
 ### Max Battery Charge Limit
@@ -63,7 +62,7 @@ Values: 0 - Normal, 1 - Overboost, 2 - Silent.
 
 ASUS_WMI_DEVID_CPU_FAN_CTRL   0x00110013
 
-Values: 0 - Fullspeed, 1 - Manual, 2 - Auto.
+Values: 0 - Auto, 1 - Fullspeed.
 
 
 (Get-WmiObject -Namespace root/WMI -Class AsusAtkWmi_WMNB).DEVS(0x00110013, Value)
