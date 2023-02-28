@@ -71,7 +71,6 @@ ASUS_WMI_DEVID_CPU_FAN_CTRL   0x00110013
 
 Values: 0 - Auto, 1 - Fullspeed.
 
-
 (Get-WmiObject -Namespace root/WMI -Class AsusAtkWmi_WMNB).DEVS(0x00110013, Value)
 
 
@@ -81,18 +80,24 @@ ASUS_WMI_DEVID_GPU_FAN_CTRL   0x00110014
 
 Values: 0 - Auto, 1 - Fullspeed.
 
-
 (Get-WmiObject -Namespace root/WMI -Class AsusAtkWmi_WMNB).DEVS(0x00110014, Value)
 
+## Display
 
-## Panel Overdrive
+### Panel Overdrive
 
 ASUS_WMI_DEVID_PANEL_OD   0x00050019       
    
 Values: 0 - Disable, 1 - Enable.
 
-
 (Get-WmiObject -Namespace root/WMI -Class AsusAtkWmi_WMNB).DEVS(0x00050019, Value)
+
+
+### Check Your Laptop For Panel OD Support
+
+Device_Status Values: 65536 - Not Supported OD Panel, 65537 - Support OD panel.
+
+(Get-WmiObject -Namespace root/WMI -Class AsusAtkWmi_WMNB).DSTS(0x00050020)
 
 
 ## Gpu settings
@@ -120,6 +125,6 @@ Values: 0 - Enable, 1 - Disable.
 
 ASUS_WMI_DEVID_EGPU   0x00090019
 
-Values: 0 - Enable, 1 - Disable.
+Values: 0 - Disable, 1 - Enable.
 
 (Get-WmiObject -Namespace root/WMI -Class AsusAtkWmi_WMNB).DEVS(0x00090019, Value)
