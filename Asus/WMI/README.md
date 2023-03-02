@@ -95,7 +95,7 @@ Values: 0 - Disable, 1 - Enable.
 
 ### Check Your Laptop For Panel OD Support
 
-Device_Status Values: 65536 - Not Supported OD Panel, 65537 - Support OD panel.
+Device_Status Values:  4294967294 - Not Supported OD Panel, 65536 - Not Supported OD Panel, 65537 - Support OD panel.
 
 (Get-WmiObject -Namespace root/WMI -Class AsusAtkWmi_WMNB).DSTS(0x00050020)
 
