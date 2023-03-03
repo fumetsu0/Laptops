@@ -26,7 +26,7 @@ ASUS_WMI_DEVID_RSOC   0x00120057
 
 ## Fans and Thermal
   
-### Current `Cpu` And `Gpu` Fan Speed
+### Current `Cpu` `Gpu` `System` Fan Speed
 
 
 
@@ -34,13 +34,17 @@ ASUS_WMI_DEVID_RSOC   0x00120057
 
 ((Get-WmiObject -Namespace root/WMI -Class AsusAtkWmi_WMNB).DSTS(0x00110014).device_Status - 0x10000) * 0x64 
 
+((Get-WmiObject -Namespace root/WMI -Class AsusAtkWmi_WMNB).DSTS(0x00110031).device_Status - 0x10000) * 0x64
+
 #### Or (Depends On The Laptop)
 
 ((Get-WmiObject -Namespace root/WMI -Class AsusAtkWmi_WMNB).DSTS(0x00110013).device_Status) * 0x64
 
 ((Get-WmiObject -Namespace root/WMI -Class AsusAtkWmi_WMNB).DSTS(0x00110014).device_Status) * 0x64
 
-#### Thanks Mochaneko!
+((Get-WmiObject -Namespace root/WMI -Class AsusAtkWmi_WMNB).DSTS(0x00110031).device_Status) * 0x64
+
+##### Thanks Mochaneko for the help with (0x00110013 0x00110014).device_Status) * 0x64! 
 
 ### Throttle Thermal Policy
 
