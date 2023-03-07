@@ -106,7 +106,7 @@ Device_Status Values:  4294967294 - Not Supported OD Panel, 65536 - Not Supporte
 (Get-WmiObject -Namespace root/WMI -Class AsusAtkWmi_WMNB).DSTS(0x00050020)
 
 
-### BackLight Control
+### Backlight Control
 
 Device_ID 0x0005001e
 
