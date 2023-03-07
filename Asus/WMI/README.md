@@ -144,7 +144,7 @@ Values: 0 - Disable, 1 - Enable.
 (Get-WmiObject -Namespace root/WMI -Class AsusAtkWmi_WMNB).DEVS(0x00090019, Value)
 
 
-### Is the eGpu connected to the device?
+### Is The eGpu Connected To The Device?
 
 Device_ID 0x00090018
 
@@ -152,4 +152,4 @@ Values: 65536 - Not Connected, 65537 - Сonnected.
 
 (Get-WmiObject -Namespace root/WMI -Class AsusAtkWmi_WMNB).DSTS(0x00090018)
 
-##### Thanks to RomanYazvinsky (https://github.com/fumetsu0/Laptops/issues/2)
+##### Thanks RomanYazvinsky (https://github.com/fumetsu0/Laptops/issues/2)
